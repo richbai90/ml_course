@@ -1,0 +1,12 @@
+[project]
+name = "ml-course"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=2.2.6",
+    "plotly>=6.5.0",
+    "scipy>=1.15.3",
+    "streamlit>=1.52.2",
+]
