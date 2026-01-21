@@ -8,5 +8,7 @@ pg = st.navigation([
     st.Page("conv_2d.py"),
     st.Page("tuning.py"),
     st.Page("tuning_torch.py"),
+    st.Page("architectures.py"),
+    st.Page("learning_methods.py"),
 ])
 pg.run()

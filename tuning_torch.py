@@ -7,7 +7,7 @@ import torch.nn as nn
 import torch.optim as optim
 
 st.set_page_config(layout="wide")
-st.title("🎛️ Tuning PyTorch Models with Optuna")
+st.title("Tuning PyTorch Models with Optuna")
 
 st.markdown("""
 ### Why tune Neural Networks?

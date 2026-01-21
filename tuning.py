@@ -9,7 +9,7 @@ st.set_page_config(layout="wide")
 st.title("Hyperparameter Tuning with Optuna")
 
 # --- Section 1: The Theory ---
-st.markdown("""
+st.markdown(r"""
 ### 1. What are Hyperparameters?
 In our **Gradient Descent** lesson, the model learned the "Weights" ($w$) automatically by minimizing loss. However, there were some settings **we** had to choose before training started, like the **Learning Rate** ($\alpha$).
 
