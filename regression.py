@@ -7,9 +7,12 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
+from utils import lightbulb_callout
+
 st.set_page_config(layout="wide")
 st.title("Lab: Regression & Model Capacity")
-
+lightbulb_callout("Big Picture", r'''Analyzing the relationship between parameter count and representational power. You will empirically test the Universal Approximation Theorem limits by attempting to fit complex non-linear functions (like sinusoids)
+                  using networks of varying depth and width.''')
 st.markdown("""
 **Can your network learn this shape?**
 This lab focuses on **Model Capacity**. 

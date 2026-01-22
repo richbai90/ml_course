@@ -7,9 +7,12 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
+from utils import lightbulb_callout
+
 st.set_page_config(layout="wide")
 st.title("Lab: Overfitting & Regularization")
-
+lightbulb_callout('Big Picture', r'''Monitoring the divergence between Empirical Risk (Training Loss) and Expected Risk (Validation Loss). This lab simulates the training dynamics to identify the onset of overfitting, introducing Regularization techniques
+                  (like L2 weight decay) to constrain the model's hypothesis space.''')
 st.markdown("""
 **The Battle of Bias vs. Variance.**
 * **Underfitting (High Bias):** The model is too simple to learn the pattern.

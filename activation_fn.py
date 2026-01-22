@@ -4,8 +4,12 @@ import streamlit as st
 import torch
 import torch.nn.functional as F
 
+from utils import lightbulb_callout
+
 st.set_page_config(layout="wide")
 st.title("Theory: Activation Functions")
+lightbulb_callout("Big Picture", r'''Without non-linear activation functions, a deep neural network collapses mathematically into a single linear transformation (since the product of matrices is just another matrix). This module examines functions like
+                  ReLU and Sigmoid, which introduce the necessary non-linearities to approximate complex, non-convex functions.''')
 
 st.markdown("""
 **The "Spark" of Intelligence.** Without activation functions, a Neural Network is just a giant Linear Regression model. No matter how many layers you stack, $W_2(W_1(x))$ is mathematically just a single matrix $W_{new}$.

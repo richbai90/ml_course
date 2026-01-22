@@ -3,12 +3,17 @@ import plotly.graph_objects as go
 import streamlit as st
 from scipy.optimize import curve_fit
 
+from utils import lightbulb_callout
+
 st.set_page_config(layout="wide")
 st.title("Function Approximation: Finding the Hidden Rules")
 
 # --- Sidebar Controls ---
 st.sidebar.header("Settings")
 dimension = st.sidebar.radio("Select Transformation Space", ["2D Transformation (Curve)", "3D Transformation (Surface)"])
+
+lightbulb_callout("Big Picture", r'''Machine learning is fundamentally a function approximation problem. Given a dataset, we attempt to model an unknown underlying function $f: \mathbb{R}^n \to \mathbb{R}^m$. This module explores the trade-offs in
+                  polynomial regression, specifically illustrating how increasing model complexity (degrees of freedom) reduces bias but increases variance—the core mechanism behind Overfitting and Underfitting.''') 
 
 # ==========================================
 # 2D TRANSFORMATION

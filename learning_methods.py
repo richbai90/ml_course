@@ -3,8 +3,14 @@ import plotly.graph_objects as go
 import streamlit as st
 from scipy.cluster.vq import kmeans, vq
 
+from utils import lightbulb_callout
+
 st.set_page_config(layout="wide")
 st.title("Supervised vs. Unsupervised Learning")
+
+lightbulb_callout("Big Picture", r'''This distinguishes between optimization objectives. Supervised Learning minimizes a loss function calculated against a known ground truth ($y$), effectively mapping inputs to targets. Unsupervised Learning lacks explicit
+                  targets; instead, it minimizes an internal objective function (such as intra-cluster variance) to discover features within the data distribution.''')
+
 
 st.markdown(r"""
 In Computational Imaging, the choice of method depends on the data we have available:

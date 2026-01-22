@@ -3,9 +3,12 @@ import streamlit as st
 import torch
 import torch.nn as nn
 
+from utils import lightbulb_callout
+
 st.set_page_config(layout="wide")
 st.title("Lab: Build Your Own Model")
-
+lightbulb_callout('Big Picture', r'''Tensor algebra and dimensionality arithmetic. This tool assists in designing valid computational graphs by calculating tensor shapes through successive convolutional and linear transformations, ensuring mathematical
+                  compatibility between layers.''')
 st.markdown("""
 **The Architect's Workbench.** Design a network layer-by-layer. This tool automatically calculates the **Output Shapes** to help you avoid the dreaded `RuntimeError: size mismatch`.
 """)

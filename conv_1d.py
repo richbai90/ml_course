@@ -1,11 +1,16 @@
-import streamlit as st
 import numpy as np
 import plotly.graph_objects as go
+import streamlit as st
 from plotly.subplots import make_subplots
 from scipy import signal
 
+from utils import lightbulb_callout
+
 st.set_page_config(layout="wide")
 st.title("1D Convolution: The Full Interaction")
+
+lightbulb_callout("Big Picture", r'''A formal look at the convolution integral $(f * g)(t)$. You will visualize the standard "flip and shift" operation used in signal processing to demonstrate how learnable kernels act as matched filters, maximizing their
+                  response when the signal aligns with the kernel's features.''')
 
 # --- 1. Setup Time and Signals ---
 n_pts = 500

@@ -7,9 +7,12 @@ from PIL import Image
 from torchvision import transforms
 from torchvision.transforms import functional as F
 
+from utils import lightbulb_callout
+
 st.set_page_config(layout="wide")
 st.title("Lab: Data Augmentation")
-
+lightbulb_callout('Big Picture', r'''Enforcing invariance via domain randomization. Since real-world data distributions are non-stationary, we simulate affine transformations (rotation, translation) and photometric noise during training. This forces the
+                  model to learn features that are invariant to these perturbations.''')
 st.markdown("""
 **Why augment data?** In computational imaging, our models often need to be **invariant** to certain changes. 
 * A cell viewed under a microscope is the same cell whether it's rotated 90° or 180°.

@@ -2,8 +2,12 @@ import numpy as np
 import plotly.graph_objects as go
 import streamlit as st
 
+from utils import lightbulb_callout
+
 st.set_page_config(layout="wide")
 st.title("Gradient Descent: Walking Down the Mountain")
+lightbulb_callout("Big Picture", r'''Neural network training is an optimization problem over a high-dimensional, non-convex loss landscape. This page visualizes the mechanics of Gradient Descent, where we iteratively update parameters $\theta$ against the
+                  negative gradient $-\nabla J(\theta)$. You will explore how the Learning Rate acts as a step-size hyperparameter, determining convergence stability and speed.''')
 st.markdown(r"""
 **The Goal:** We defined our Neural Network's performance using a **Loss Function** (Error). The lower the loss, the better the model.
 

@@ -5,9 +5,12 @@ import optuna
 import plotly.graph_objects as go
 import streamlit as st
 
+from utils import lightbulb_callout
+
 st.set_page_config(layout="wide")
 st.title("Hyperparameter Tuning with Optuna")
-
+lightbulb_callout('Big Picture', r'''Optimization of non-differentiable hyperparameters. Unlike weights, parameters like learning rate or architecture depth cannot be learned via backpropagation. This module demonstrates Bayesian Optimization (via Optuna)
+                  to efficiently search the hyperparameter space for the global minimum.''')
 # --- Section 1: The Theory ---
 st.markdown(r"""
 ### 1. What are Hyperparameters?

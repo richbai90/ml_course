@@ -6,8 +6,12 @@ import torch.nn.functional as F
 from PIL import Image
 from torchvision.models import MobileNet_V3_Small_Weights, mobilenet_v3_small
 
+from utils import lightbulb_callout
+
 st.set_page_config(layout="wide")
 st.title("Lab: Live Inference Playground")
+lightbulb_callout('Big Picture', r'''The transition from training graphs to inference graphs. This covers the strict protocol required for deployment: disabling gradient computation (no_grad), freezing batch normalization statistics (eval mode), and
+                  handling tensor batching for deterministic forward propagation.''')
 
 st.markdown("""
 **Training is only half the battle.** To use a model in the real world (Inference), we must strictly follow the pipeline the model was trained with.

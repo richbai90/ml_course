@@ -5,9 +5,12 @@ import plotly.graph_objects as go
 import streamlit as st
 from sklearn.metrics import auc, precision_recall_curve, roc_curve
 
+from utils import lightbulb_callout
+
 st.set_page_config(layout="wide")
 st.title("Lab: Evaluation Metrics")
-
+lightbulb_callout('Big Picture', r'''Performance quantification beyond scalar accuracy. We examine metrics for class-imbalanced datasets, including Precision, Recall, and F1-Scores. For geometric tasks, we introduce IoU (Intersection over Union) to
+                  quantify the topological overlap between predicted and ground-truth bounding boxes.''')
 st.markdown("""
 **How do we know if our model is "good"?** In Computational Imaging, **Accuracy** is often misleading. 
 * If 99% of your pixels are background and 1% are a tumor, a model that predicts "background" for everything has 99% accuracy but is useless.

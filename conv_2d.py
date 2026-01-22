@@ -1,13 +1,18 @@
-import streamlit as st
 import numpy as np
 import plotly.graph_objects as go
+import streamlit as st
 from scipy import signal
+
+from utils import lightbulb_callout
 
 # Wide mode is essential for this three-plot layout
 st.set_page_config(layout="wide", page_title="2D Convolution: Raster Lab")
 
 st.title("🖼️ 2D Convolution: Raster Scan & Spatial Features")
+lightbulb_callout("Big Picture", r'''Extending convolution to 2D spatial domains. This demonstrates the Raster Scan operation central to Computer Vision. You will analyze how discrete kernels (like Sobel operators) exploit spatial invariance to compute
+                  gradients and extract morphological features like edges and textures.''')
 st.markdown("---")
+
 
 # --- 1. Setup Input Image ---
 img_size = 30

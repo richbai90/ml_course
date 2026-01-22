@@ -3,8 +3,12 @@ import plotly.graph_objects as go
 import streamlit as st
 from scipy.optimize import minimize
 
+from utils import lightbulb_callout
+
 st.set_page_config(layout='wide')
 st.title("The Hidden Layer: Bending Space")
+lightbulb_callout("Big Picture", r'''Deep learning leverages layer-wise composition to achieve linear separability. While a single layer is limited to defining hyperplanes, Hidden Layers act as coordinate transformations, mapping non-linearly separable
+                  input data into a higher-dimensional latent space where classes become linearly separable.''')
 st.markdown(r"""
 We've seen that a single layer (like linear regression) draws a straight line (or plane) to separate data. 
 But what if the data **cannot** be separated by a straight line?

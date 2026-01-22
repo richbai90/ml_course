@@ -1,12 +1,16 @@
-import streamlit as st
 import numpy as np
+import plotly.express as px
+import plotly.graph_objects as go
+import streamlit as st
 import torch
 import torch.nn as nn
-import plotly.graph_objects as go
-import plotly.express as px
+
+from utils import lightbulb_callout
 
 st.set_page_config(layout="wide")
 st.title("Deep Learning Architectures")
+lightbulb_callout("Big Picture", r'''An analysis of inductive biases in network design. We compare MLPs (dense connectivity), CNNs (translational invariance/locality), and Transformers (global attention mechanisms) to understand which architectures are
+                  mathematically best suited for specific data modalities (e.g., Euclidean grids vs. sequences).''')
 st.markdown("""
 In Computational Imaging, we choose architectures based on the structure of the data and the problem we are solving (e.g., Classification, Tracking, or Domain Translation).
 """)
