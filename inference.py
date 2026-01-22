@@ -6,7 +6,7 @@ import torch.nn.functional as F
 from PIL import Image
 from torchvision.models import MobileNet_V3_Small_Weights, mobilenet_v3_small
 
-from utils import lightbulb_callout
+from utils import ask_ai, lightbulb_callout
 
 st.set_page_config(layout="wide")
 st.title("Lab: Live Inference Playground")
@@ -142,3 +142,6 @@ with torch.no_grad():
     
 print(probs.topk(5))
 """, language="python")
+
+st.divider()
+ask_ai()

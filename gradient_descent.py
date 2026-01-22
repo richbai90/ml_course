@@ -2,7 +2,7 @@ import numpy as np
 import plotly.graph_objects as go
 import streamlit as st
 
-from utils import lightbulb_callout
+from utils import ask_ai, lightbulb_callout
 
 st.set_page_config(layout="wide")
 st.title("Gradient Descent: Walking Down the Mountain")
@@ -163,3 +163,6 @@ else:
     1.  Increase the **Learning Rate** above `1.0`. Watch the path oscillate back and forth.
     2.  If the Learning Rate is too high, the algorithm will **diverge** (explode outwards) instead of converging.
     """)
+
+st.divider()
+ask_ai()

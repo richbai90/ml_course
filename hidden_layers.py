@@ -3,7 +3,7 @@ import plotly.graph_objects as go
 import streamlit as st
 from scipy.optimize import minimize
 
-from utils import lightbulb_callout
+from utils import ask_ai, lightbulb_callout
 
 st.set_page_config(layout='wide')
 st.title("The Hidden Layer: Bending Space")
@@ -188,3 +188,6 @@ st.markdown(r"""
 # Metric
 accuracy = np.mean(prediction_class == y)
 st.metric("Model Accuracy", f"{accuracy:.0%}")
+
+st.divider()
+ask_ai()

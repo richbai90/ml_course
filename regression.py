@@ -7,7 +7,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-from utils import lightbulb_callout
+from utils import ask_ai, lightbulb_callout
 
 st.set_page_config(layout="wide")
 st.title("Lab: Regression & Model Capacity")
@@ -163,3 +163,6 @@ def run_lab_interface():
 
 # Run the fragment
 run_lab_interface()
+
+st.divider()
+ask_ai()

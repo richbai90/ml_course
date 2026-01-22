@@ -4,7 +4,7 @@ import streamlit as st
 from plotly.subplots import make_subplots
 from scipy import signal
 
-from utils import lightbulb_callout
+from utils import ask_ai, lightbulb_callout
 
 st.set_page_config(layout="wide")
 st.title("1D Convolution: The Full Interaction")
@@ -173,3 +173,6 @@ Flipping the kernel aligns the "history" of the signal with the "response" of th
 * **Signal Analysis:** It tells us how a system (like a speaker or a sensor) will distort an input signal.
     """
 )
+
+st.divider()
+ask_ai()

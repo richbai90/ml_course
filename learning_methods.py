@@ -3,7 +3,7 @@ import plotly.graph_objects as go
 import streamlit as st
 from scipy.cluster.vq import kmeans, vq
 
-from utils import lightbulb_callout
+from utils import ask_ai, lightbulb_callout
 
 st.set_page_config(layout="wide")
 st.title("Supervised vs. Unsupervised Learning")
@@ -142,3 +142,6 @@ with tab2:
             height=400
         )
         st.plotly_chart(fig_u, use_container_width=True) 
+
+st.divider()
+ask_ai()

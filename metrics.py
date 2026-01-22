@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import streamlit as st
 from sklearn.metrics import auc, precision_recall_curve, roc_curve
 
-from utils import lightbulb_callout
+from utils import ask_ai, lightbulb_callout
 
 st.set_page_config(layout="wide")
 st.title("Lab: Evaluation Metrics")
@@ -201,3 +201,6 @@ with tab2:
         fig_iou.add_trace(go.Scatter(x=[pred_box[0]], y=[pred_box[1]], text=["Prediction"], mode="text", textposition="top left", showlegend=False))
         
         st.plotly_chart(fig_iou)
+
+st.divider()
+ask_ai()

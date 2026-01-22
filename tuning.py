@@ -5,7 +5,7 @@ import optuna
 import plotly.graph_objects as go
 import streamlit as st
 
-from utils import lightbulb_callout
+from utils import ask_ai, lightbulb_callout
 
 st.set_page_config(layout="wide")
 st.title("Hyperparameter Tuning with Optuna")
@@ -120,3 +120,6 @@ with col2:
         st.plotly_chart(fig, use_container_width=True)
     else:
         st.info("Click 'Start Tuning Study' to see Optuna in action.")
+
+st.divider()
+ask_ai()

@@ -6,6 +6,8 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
+from utils import ask_ai
+
 st.set_page_config(layout="wide")
 st.title("Tuning PyTorch Models with Optuna")
 
@@ -171,3 +173,6 @@ with col2:
         fig_static.add_trace(go.Scatter(x=X_numpy.flatten(), y=y_numpy.flatten(), mode='markers', name='Data', marker=dict(color='gray')))
         fig_static.update_layout(title="Target Dataset: Noisy Sine Wave", height=400)
         st.plotly_chart(fig_static, use_container_width=True)
+
+st.divider()
+ask_ai()

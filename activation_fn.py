@@ -4,7 +4,7 @@ import streamlit as st
 import torch
 import torch.nn.functional as F
 
-from utils import lightbulb_callout
+from utils import ask_ai, lightbulb_callout
 
 st.set_page_config(layout="wide")
 st.title("Theory: Activation Functions")
@@ -159,3 +159,6 @@ with tab2:
             st.caption("Notice how ReLU 'folds' all negative space onto the axes? That's how it creates piecewise linear boundaries.")
         elif demo_act == "Tanh":
             st.caption("Notice how Tanh 'squishes' the infinite grid into a 1x1 box.")
+
+st.divider()
+ask_ai()

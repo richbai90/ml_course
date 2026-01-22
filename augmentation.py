@@ -7,7 +7,7 @@ from PIL import Image
 from torchvision import transforms
 from torchvision.transforms import functional as F
 
-from utils import lightbulb_callout
+from utils import ask_ai, lightbulb_callout
 
 st.set_page_config(layout="wide")
 st.title("Lab: Data Augmentation")
@@ -166,3 +166,6 @@ train_transforms = transforms.Compose([
 # Note: Pytorch doesn't have a built-in "AddGaussianNoise" in standard transforms,
 # so we often write a custom Lambda function for that.
 """, language="python")
+
+st.divider()
+ask_ai()

@@ -7,7 +7,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-from utils import lightbulb_callout
+from utils import ask_ai, lightbulb_callout
 
 st.set_page_config(layout="wide")
 st.title("Lab: Overfitting & Regularization")
@@ -167,3 +167,6 @@ else:
     fig_static.add_trace(go.Scatter(x=x_train, y=y_train, mode='markers', name='Training Data', marker=dict(color='blue')))
     fig_static.update_layout(title="Initial Data Distribution", height=400)
     col_charts.plotly_chart(fig_static, use_container_width=True)
+
+st.divider()
+ask_ai()

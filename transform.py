@@ -3,7 +3,7 @@ import plotly.graph_objects as go
 import streamlit as st
 from scipy.optimize import curve_fit
 
-from utils import lightbulb_callout
+from utils import ask_ai, lightbulb_callout
 
 st.set_page_config(layout="wide")
 st.title("Function Approximation: Finding the Hidden Rules")
@@ -239,3 +239,6 @@ If our assumption is accurate, and such a mapping does exist, the job of the neu
 Machine learning is the method used to find the the unknown function T.
 There are several methods, but the most popular by far is gradient descent optimization.
 """)
+
+st.divider()
+ask_ai()

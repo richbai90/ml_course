@@ -5,7 +5,7 @@ import streamlit as st
 import torch
 import torch.nn as nn
 
-from utils import lightbulb_callout
+from utils import ask_ai, lightbulb_callout
 
 st.set_page_config(layout="wide")
 st.title("Deep Learning Architectures")
@@ -184,3 +184,7 @@ with tab3:
         
         num_patches = (img_size // patch_size) ** 2
         st.info(f"The Transformer sees this image as a sequence of **{num_patches} vectors**, not a grid of pixels.") 
+
+st.divider()
+
+ask_ai()

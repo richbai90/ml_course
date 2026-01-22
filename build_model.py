@@ -3,7 +3,7 @@ import streamlit as st
 import torch
 import torch.nn as nn
 
-from utils import lightbulb_callout
+from utils import ask_ai, lightbulb_callout
 
 st.set_page_config(layout="wide")
 st.title("Lab: Build Your Own Model")
@@ -166,3 +166,6 @@ model = CustomModel()
 print(model)
 """
     st.code(full_code, language="python")
+
+st.divider()
+ask_ai()

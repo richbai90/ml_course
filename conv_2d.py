@@ -3,7 +3,7 @@ import plotly.graph_objects as go
 import streamlit as st
 from scipy import signal
 
-from utils import lightbulb_callout
+from utils import ask_ai, lightbulb_callout
 
 # Wide mode is essential for this three-plot layout
 st.set_page_config(layout="wide", page_title="2D Convolution: Raster Lab")
@@ -133,3 +133,6 @@ For kernels like **Sobel (Edge Detection)**, the mathematical result contains bo
 Notice that as you increase the **Stride**, the output feature map (Plot 3) physically shrinks. This represents a form of downsampling. In deep learning, high strides are used to reduce the computational load and increase the "receptive field" of the network, allowing it to see larger structures with fewer pixels.
 """
 )
+
+st.divider()
+ask_ai()
